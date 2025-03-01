@@ -7,12 +7,12 @@ import messageRoutes from "./httpRoutes.js";
 
 dotenv.config();
 
-const PORT = process.env.WS_PORT || 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: ["https://chatapp-qgp4sw357-gunjan-patels-projects.vercel.app/", "http://localhost:3000"], // Update with your frontend domain
+  origin: ["https://chatapp-qgp4sw357-gunjan-patels-projects.vercel.app/", "http://localhost:3000","https://vercel.com"], // Update with your frontend domain
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 }));
