@@ -9,7 +9,7 @@ let io;
 export function initializeSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: ["https://chatapp-6kgqdeh4n-gunjan-patels-projects.vercel.app", "http://localhost:3000","https://vercel.com"],
+      origin: ["https://chatapp-6kgqdeh4n-gunjan-patels-projects.vercel.app", "http://localhost:3000","https://vercel.com","https://chatapp-delta-sandy.vercel.app"],
       methods: ["GET", "POST"],
     },
   });

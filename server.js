@@ -12,7 +12,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: ["https://chatapp-6kgqdeh4n-gunjan-patels-projects.vercel.app", "http://localhost:3000","https://vercel.com"], // Update with your frontend domain
+  origin: ["https://chatapp-6kgqdeh4n-gunjan-patels-projects.vercel.app", "http://localhost:3000","https://vercel.com","https://chatapp-delta-sandy.vercel.app"], // Update with your frontend domain
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 }));
