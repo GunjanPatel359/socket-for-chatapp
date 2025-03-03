@@ -23,10 +23,11 @@ export function initializeSocket(server) {
     }
 
     try {
+      console.log(token,channelId)
       const tokenData = jwt.verify(token, process.env.JWT_SECRET);
       console.log("Decoded Token Data:", tokenData);
-
-      if (!tokenData || tokenData.id !== channelId || !tokenData.permissions.permission?.viewChannel) {
+      console.log(!tokenData,tokenData.id !== channelId,!tokenData.permissions?.viewChannel)
+      if (!tokenData || tokenData.id !== channelId || !tokenData.permissions?.viewChannel) {
         console.log("❌ [Socket.IO] Invalid token data. Disconnecting...");
         return socket.disconnect(true);
       }
@@ -37,7 +38,7 @@ export function initializeSocket(server) {
 
     if (!channelId) {
       console.log("❌ [Socket.IO] Missing channelId. Disconnecting...");
-      return socket.disconnect();
+      return socket.disconnect(true);
     }
 
     console.log(`✅ [Socket.IO] User joined /channel/${channelId}`);

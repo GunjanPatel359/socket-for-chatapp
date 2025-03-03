@@ -1,6 +1,7 @@
 {
   "name": "socket",
   "version": "1.0.0",
+  "private": false,
   "description": "",
   "license": "ISC",
   "author": "",
